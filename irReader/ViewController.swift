@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        print(FetchNewsList.fetchNewsList(number: 10))
     }
 
     override func didReceiveMemoryWarning() {
