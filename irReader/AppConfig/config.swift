@@ -15,6 +15,9 @@ enum fetchStyle {
     case getList
 }
 
+//域名URL前缀
+let domainUrl = "http://www.kuvku.com/"
+
 func fetchUrl(style: fetchStyle) ->String {
     switch style {
     case .getClass:
