@@ -65,6 +65,10 @@ class NewsListTableViewController: UITableViewController {
         
         cell.textLabel?.text = newsList[indexPath.row].title
         
+        if indexPath.row % 2 == 0 {
+            cell.backgroundColor = UIColor.lightGray
+        }
+        
         return cell
     }
     

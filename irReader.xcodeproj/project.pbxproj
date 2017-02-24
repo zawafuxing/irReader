@@ -22,7 +22,6 @@
 		62AE9B1E1E57C7C800B03F7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62AE9B1D1E57C7C800B03F7C /* Assets.xcassets */; };
 		62AE9B211E57C7C800B03F7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62AE9B1F1E57C7C800B03F7C /* LaunchScreen.storyboard */; };
 		62AE9B2C1E57C7C800B03F7C /* irReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE9B2B1E57C7C800B03F7C /* irReaderTests.swift */; };
-		62E7385E1E5BDDE100AEF672 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E7385D1E5BDDE000AEF672 /* ViewController.swift */; };
 		62E738601E5BDE2C00AEF672 /* NewsClassCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E7385F1E5BDE2C00AEF672 /* NewsClassCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +54,6 @@
 		62AE9B271E57C7C800B03F7C /* irReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = irReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62AE9B2B1E57C7C800B03F7C /* irReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = irReaderTests.swift; sourceTree = "<group>"; };
 		62AE9B2D1E57C7C800B03F7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		62E7385D1E5BDDE000AEF672 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controller/ViewController.swift; sourceTree = "<group>"; };
 		62E7385F1E5BDE2C00AEF672 /* NewsClassCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsClassCollectionViewController.swift; path = Controller/NewsClassCollectionViewController.swift; sourceTree = "<group>"; };
 		78AA1EDCAE35C07D5BE0FD58 /* Pods-irReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-irReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-irReader/Pods-irReader.release.xcconfig"; sourceTree = "<group>"; };
 		9973784473E7F7CA19DABCD9 /* Pods_irReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_irReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,7 +108,6 @@
 		628756A21E594361009CD732 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				62E7385D1E5BDDE000AEF672 /* ViewController.swift */,
 				627314CF1E5ABA4F003BF0E7 /* NewsListTableViewController.swift */,
 				62501AB41E5B27970069BEC9 /* WebViewController.swift */,
 				62E7385F1E5BDE2C00AEF672 /* NewsClassCollectionViewController.swift */,
@@ -361,7 +358,6 @@
 				6287569F1E594328009CD732 /* NewsItem.swift in Sources */,
 				62AE9B141E57C7C700B03F7C /* AppDelegate.swift in Sources */,
 				628756AA1E594692009CD732 /* FetchNewsList.swift in Sources */,
-				62E7385E1E5BDDE100AEF672 /* ViewController.swift in Sources */,
 				62501AB51E5B27970069BEC9 /* WebViewController.swift in Sources */,
 				626B2EF11E5C64B600F08A36 /* NewsClassItem.swift in Sources */,
 				62E738601E5BDE2C00AEF672 /* NewsClassCollectionViewController.swift in Sources */,
