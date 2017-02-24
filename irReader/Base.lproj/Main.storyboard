@@ -43,7 +43,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="h7e-Ns-hei">
-                            <rect key="frame" x="169" y="251" width="37" height="37"/>
+                            <rect key="frame" x="0.0" y="-64" width="375" height="667"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </activityIndicatorView>
                         <cells>
@@ -124,11 +124,15 @@
         <!--News List Table View Controller-->
         <scene sceneID="v9m-E1-a44">
             <objects>
-                <tableViewController id="Xco-v0-mr3" customClass="NewsListTableViewController" customModule="irReader" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="newsListController" id="Xco-v0-mr3" customClass="NewsListTableViewController" customModule="irReader" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FI0-0Q-v91">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="snN-Qd-fbk">
+                            <rect key="frame" x="0.0" y="72" width="375" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCellIdentifier" id="2Hl-p4-To8">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -157,6 +161,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="TLK-O3-yhQ"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="snN-Qd-fbk" id="4Wx-zg-knw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Vb-uH-Kkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -178,6 +185,10 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Rag-k0-oTj">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -188,6 +199,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Rag-k0-oTj" id="U5u-4N-GTi"/>
                         <outlet property="webBrowser" destination="YSA-ld-Xrg" id="M7Q-xM-uP9"/>
                     </connections>
                 </viewController>
