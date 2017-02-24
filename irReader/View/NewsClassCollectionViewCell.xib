@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="k0m-i9-3DS" customClass="NewsClassCollectionViewCell" customModule="irReader" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="95" height="116"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="95" height="116"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QYz-me-T6i">
+                        <rect key="frame" x="0.0" y="0.0" width="95" height="95"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3O3-3g-Daw">
+                        <rect key="frame" x="0.0" y="95" width="95" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.27676224708557129" green="0.92408615350723267" blue="0.53728282451629639" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3O3-3g-Daw" firstAttribute="top" secondItem="QYz-me-T6i" secondAttribute="bottom" id="3C3-xH-YJr"/>
+                <constraint firstAttribute="bottom" secondItem="3O3-3g-Daw" secondAttribute="bottom" id="3Rk-jY-6Wg"/>
+                <constraint firstAttribute="bottom" secondItem="QYz-me-T6i" secondAttribute="bottom" constant="21" id="6cz-sA-rm9"/>
+                <constraint firstItem="QYz-me-T6i" firstAttribute="leading" secondItem="k0m-i9-3DS" secondAttribute="leading" id="BQl-UG-Dlh"/>
+                <constraint firstItem="QYz-me-T6i" firstAttribute="leading" secondItem="k0m-i9-3DS" secondAttribute="leading" id="DeL-Pv-5zx"/>
+                <constraint firstAttribute="trailing" secondItem="QYz-me-T6i" secondAttribute="trailing" id="EVd-9n-8Mh"/>
+                <constraint firstItem="QYz-me-T6i" firstAttribute="top" secondItem="k0m-i9-3DS" secondAttribute="top" id="YV3-d7-48H"/>
+                <constraint firstItem="3O3-3g-Daw" firstAttribute="leading" secondItem="k0m-i9-3DS" secondAttribute="leading" id="dSt-Nq-UHD"/>
+                <constraint firstAttribute="trailing" secondItem="3O3-3g-Daw" secondAttribute="trailing" id="wSw-Wa-uuo"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="QYz-me-T6i" id="pNY-wC-UsB"/>
+                <outlet property="label" destination="3O3-3g-Daw" id="uIh-du-GYK"/>
+            </connections>
+            <point key="canvasLocation" x="140.5" y="145"/>
+        </collectionViewCell>
+    </objects>
+</document>

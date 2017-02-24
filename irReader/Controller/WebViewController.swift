@@ -8,14 +8,15 @@
 
 import UIKit
 
-class WebViewController: UIViewController {
+class WebViewController: UIViewController, UIWebViewDelegate{
 
     @IBOutlet weak var webBrowser: UIWebView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var webUrlString = "http://www.kuvku.com"
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        webBrowser.delegate = self
         let url = URL(string: webUrlString)
         let request = URLRequest(url: url!)
         webBrowser.loadRequest(request)
@@ -26,7 +27,15 @@ class WebViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func webViewDidStartLoad(_ webView: UIWebView) {
+        //启动菊花转
+        activityIndicator.startAnimating()
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        //结束菊花转
+        activityIndicator.stopAnimating()
+    }
     /*
     // MARK: - Navigation
 

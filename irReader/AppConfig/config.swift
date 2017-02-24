@@ -26,3 +26,5 @@ func fetchUrl(style: fetchStyle) ->String {
         return serverUrlPerfix+"getNewsList.php"
     }
 }
+
+let rootClassID = "2"

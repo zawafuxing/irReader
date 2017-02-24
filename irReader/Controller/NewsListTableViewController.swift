@@ -12,13 +12,17 @@ import SwiftyJSON
 
 class NewsListTableViewController: UITableViewController {
     var newsList:[NewsItem] = []
+    var newsClassID: String = ""
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     func fetchNewsList(){
-        let url = fetchUrl(style: .getList)
+        let url = fetchUrl(style: .getList) + "?classid=" + newsClassID
         Alamofire.request(url).responseJSON { response in
-            if let error = response.error {
-                //Todo-此处可创建一个警告窗口
-                print(error)
+            if response.error != nil {
+                let alertController = UIAlertController(title: "网络错误", message: "请检查网络或者稍后再试。", preferredStyle: .alert)
+                let iKnowAction = UIAlertAction(title: "知道了", style: .default, handler: nil)
+                alertController.addAction(iKnowAction)
+                self.present(alertController, animated: true, completion: nil)
             } else {
                 if let jsonData = response.data{
                     let json = JSON(data: jsonData)
@@ -27,6 +31,7 @@ class NewsListTableViewController: UITableViewController {
                         self.newsList.append(newsItem)
                         self.tableView.reloadData()
                     }
+                    self.activityIndicator.stopAnimating()
                 }
             }
         }
